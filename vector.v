@@ -64,6 +64,10 @@ pub fn (v Vector3<T>) cross_product<T>(v2 Vector3<T>) Vector3<T> {
 	return Vector3{v.y * v2.z - v.z * v2.y, v.z * v2.x - v.x * v2.z, v.x * v2.y - v.y * v2.x}
 }
 
+pub fn (v Vector3<T>) dot_product<T>(v2 Vector3<T>) T {
+	return v.x * v2.x + v.y * v2.y + v.z * v2.z
+}
+
 // Inverses a vector
 pub fn (v Vector3<T>) inverse<T>() Vector3<T> {
 	return Vector3{-v.x, -v.y, -v.z}
